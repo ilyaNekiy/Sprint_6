@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 
 @RunWith(Parameterized.class)
-public class LionParameterizedTests {
+public class LionParameterizedTest {
 
     @Before
     public void init() {

@@ -10,13 +10,13 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.class)
-public class FelineTests {
+public class FelineTest {
     @Spy
     Feline feline;
 
     @Test
     public void eatMeatTest() throws Exception {//spy
-        feline.eatMeat();
+        feline.eatMeat();//SPY
         Mockito.verify(feline,Mockito.times(1)).getFood("Хищник");
     }
     @Test
@@ -25,12 +25,12 @@ public class FelineTests {
         assertEquals("Кошачьи",feline.getFamily());
     }
     @Test
-    public void getKittensTestWithoutAttributes(){//SPY
-        feline.getKittens();
+    public void getKittensTestWithoutAttributes(){
+        feline.getKittens();//SPY
         Mockito.verify(feline,Mockito.times(1)).getKittens(1);
     }
     @Test
-    public void getKittensTestWithAttributes(){//SPY
+    public void getKittensTestWithAttributes(){
         Feline feline= new Feline ();
         assertEquals(5,feline.getKittens(5));
     }

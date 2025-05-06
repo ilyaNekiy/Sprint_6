@@ -17,10 +17,6 @@ public class Lion {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
-    //Конструктор с параметром в который уже передается обьект класса Feline (Иньекция зависимостей).
-    public Lion(Feline feline) {
-        this.feline = feline;
-    }
     //Поскольку применяем инъекцию зависимостей
     //Feline feline = new Feline();
 

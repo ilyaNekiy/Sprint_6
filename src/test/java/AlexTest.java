@@ -8,6 +8,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AlexTest {
@@ -32,7 +33,7 @@ public class AlexTest {
     @Test
     public void testHasManeShouldReturnTrue () throws Exception {
         Alex alex= new Alex(feline);
-        assertEquals(true, alex.doesHaveMane());
+        assertTrue(alex.doesHaveMane());
 
     }
 }

@@ -17,9 +17,11 @@ public class LionTest {
 
     @Test
     public void getKittensTest() throws Exception {
-        Lion lion= new Lion (feline);
-        lion.getKittens();
+        Lion lion= new Lion ("Самец",feline);
+        Mockito.when(feline.getKittens()).thenReturn(1); //Добавленный stab согласно pull request comment.
+        assertEquals(1,lion.getKittens());// По сути это валидация stab
         Mockito.verify(feline,Mockito.times(1)).getKittens();
+
     }
 
     @Test
@@ -33,7 +35,7 @@ public class LionTest {
 
     @Test
     public void getFoodTest() throws Exception {
-        Lion lion= new Lion (feline);
+        Lion lion= new Lion ("Самка",feline);
         lion.getFood();
         Mockito.verify(feline).getFood("Хищник");
 
